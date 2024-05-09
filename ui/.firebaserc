@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "release": "koloha-management-system",
+    "staging": "kms-staging-c48f9",
+    "test": "kms-staging-c48f9"
+  }
+}

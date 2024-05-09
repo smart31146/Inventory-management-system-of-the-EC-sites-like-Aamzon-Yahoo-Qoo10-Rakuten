@@ -1,0 +1,20 @@
+{
+  "name": "kms-api",
+  "version": "1.0.0",
+  "repository": "git@github.com:lsctfront-org/kms-api.git",
+  "scripts": {
+    "dev": "NODE_ENV=development yarn --cwd ./functions dev",
+    "test": "yarn --cwd ./functions test",
+    "deploy": "firebase deploy --project=koloha-management-system --only functions,firestore,storage",
+    "deploy:ui": "yarn --cwd ./ui deploy && firebase deploy --only hosting",
+    "deploy:ui:prd":  "yarn --cwd ./ui deploy:prod && firebase deploy --only hosting",
+    "deploy:func": "firebase use staging && firebase deploy --only functions",
+    "deploy:func:prd": "firebase use release && firebase deploy --only functions",
+    "release": "firebase use release && yarn deploy:func:prd && yarn deploy:ui:prd",
+    "staging":  "firebase use staging && yarn deploy:func && yarn deploy:ui"
+  },
+  "dependencies": {
+    "@types/uuid": "^9.0.7",
+    "uuid": "^9.0.1"
+  }
+}

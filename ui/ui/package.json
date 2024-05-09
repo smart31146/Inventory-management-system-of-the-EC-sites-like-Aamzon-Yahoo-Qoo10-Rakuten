@@ -1,0 +1,44 @@
+{
+  "name": "reservation-form",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env APP_ENV=development next dev",
+    "build": "cross-env APP_ENV=development next build",
+    "build:prd": "cross-env APP_ENV=production next build",
+    "export": "cross-env APP_ENV=development next export",
+    "export:prd": "cross-env APP_ENV=production next export",
+    "deploy": "firebase use staging && cross-env APP_ENV=development next build && next export",
+    "deploy:prod": "firebase use release && cross-env APP_ENV=production next build && next export",
+    "start": "next start",
+    "test": "jest --watch",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@mui/lab": "^5.0.0-alpha.158",
+    "@mui/material": "^5.10.6",
+    "@mui/x-date-pickers": "^5.0.2",
+    "date-fns": "^2.29.2",
+    "dayjs": "^1.11.10",
+    "firebase": "^9.9.4",
+    "next": "12.3.0",
+    "npm": "^8.19.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.0",
+    "react-router-dom": "^6.4.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/node": "18.7.16",
+    "@types/react": "18.0.18",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "typescript": "4.8.3"
+  }
+}
